@@ -22,4 +22,4 @@ app.include_router(task_route.router)
 
 @app.get("/")
 def read_root():
-    return {"message": "Todo List App Backend Server Run Aagudhu!"}
+    return {"message": "Todo List App Backend Server is running!"}
