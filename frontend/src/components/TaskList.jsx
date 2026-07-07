@@ -58,7 +58,7 @@ function TaskList() {
   };
 
   if (loading) {
-    return <p>Loading... (tasks vara kaathurukom)</p>;
+    return <p>Loading... (wait for tasks)</p>;
   }
 
   return (
