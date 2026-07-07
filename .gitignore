@@ -1,3 +1,14 @@
-node_modules
-venv
-.env
+# Python (Backend) temporary files
+backend/venv/
+backend/.env
+backend/__pycache__/
+backend/*.pyc
+backend/todo.db
+
+# Node.js (Frontend) temporary files
+frontend/node_modules/
+frontend/.env
+frontend/dist/
+
+# OS related files
+.DS_Store
