@@ -11,16 +11,8 @@ engine = create_engine(
     connect_args=connect_args
 )
 
-<<<<<<< HEAD
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-=======
-SessionLocal = sessionmaker(
-    autocommit=False,
-    autoflush=False,
-    bind=engine
-)
->>>>>>> 85e6ca36e4f95fd64aed5eee5d79d0f895d17ced
 
 Base = declarative_base()
 
