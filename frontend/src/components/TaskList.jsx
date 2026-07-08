@@ -57,8 +57,17 @@ function TaskList() {
     }
   };
 
+  const handleEdit = async (id, updatedData) => {
+    try {
+      const response = await updateTask(id, updatedData);
+      setTasks(tasks.map((t) => (t.id === id ? response.data : t)));
+    } catch (error) {
+      console.error("Task edit error:", error);
+    }
+  };
+
   if (loading) {
-    return <p>Loading... (tasks vara kaathurukom)</p>;
+    return <p>Loading... (Loading tasks...)</p>;
   }
 
   return (
@@ -75,6 +84,7 @@ function TaskList() {
               task={task}
               onToggle={handleToggle}
               onDelete={handleDelete}
+              onEdit={handleEdit}
             />
           ))}
         </ul>

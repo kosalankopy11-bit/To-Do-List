@@ -1,11 +1,9 @@
 from pydantic import BaseModel
 from typing import Optional
 
-
 class TaskCreate(BaseModel):
     title: str
     description: Optional[str] = None
-
 
 
 class TaskUpdate(BaseModel):
@@ -20,5 +18,6 @@ class TaskResponse(BaseModel):
     description: Optional[str] = None
     completed: bool
 
-    class Config:
-        from_attributes = True  
+    model_config = {
+        "from_attributes": True
+    }

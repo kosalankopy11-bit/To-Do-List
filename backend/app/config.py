@@ -1,13 +1,6 @@
-import os
-from dotenv import load_dotenv
+DATABASE_URL = "sqlite:///./todo.db"
 
 
-load_dotenv()
-
-
-class Settings:
-   DATABASE_URL: str = os.getenv("DATABASE_URL")
-   APP_NAME: str = os.getenv("APP_NAME", "Todo List App")
-
-
-settings = Settings()
+SECRET_KEY = "change-this-secret-key-in-production-123456"
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  

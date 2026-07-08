@@ -11,7 +11,7 @@ function AddTask({ onAdd }) {
 
 
    if (title.trim() === "") {
-     alert("Task title ah kandippa type pannunga!");
+     alert("Please enter a task title.");
   return;
    }
 
